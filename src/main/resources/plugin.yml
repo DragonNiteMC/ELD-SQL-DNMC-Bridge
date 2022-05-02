@@ -1,3 +1,6 @@
-name: ${project.name}
+name: Eld-SQL-DNMC-Bridge
 version: ${project.version}
 main: com.ericlam.mc.eldsqldnmcbridge.ELDSQLDNMCBridge
+depend:
+  - DragonNiteMC-Core
+  - ELDependenci-SQL
