@@ -15,11 +15,11 @@
 
     <repositories>
         <repository>
-            <id>github</id>
+            <id>eld-sql</id>
             <url>https://maven.pkg.github.com/ELDependenci/eldependenci-sql</url>
         </repository>
         <repository>
-            <id>github</id>
+            <id>eld</id>
             <url>https://maven.pkg.github.com/ELDependenci/eldependenci</url>
         </repository>
         <repository>
