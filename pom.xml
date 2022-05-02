@@ -19,7 +19,7 @@
             <url>https://maven.pkg.github.com/ELDependenci/eldependenci-sql</url>
         </repository>
         <repository>
-            <id>eld</id>
+            <id>github</id>
             <url>https://maven.pkg.github.com/ELDependenci/eldependenci</url>
         </repository>
         <repository>
