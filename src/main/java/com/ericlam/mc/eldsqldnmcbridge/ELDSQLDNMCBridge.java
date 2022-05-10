@@ -1,8 +1,8 @@
 package com.ericlam.mc.eldsqldnmcbridge;
 
 import chu77.eldependenci.sql.SQLInstallation;
-import com.dragonnite.mc.dnmc.core.main.DragonNiteMC;
-import com.dragonnite.mc.dnmc.core.managers.SQLDataSource;
+import com.dragonite.mc.dnmc.core.main.DragoniteMC;
+import com.dragonite.mc.dnmc.core.managers.SQLDataSource;
 import com.ericlam.mc.eld.ELDBukkitPlugin;
 import com.ericlam.mc.eld.ManagerProvider;
 import com.ericlam.mc.eld.ServiceCollection;
@@ -22,7 +22,7 @@ public class ELDSQLDNMCBridge extends ELDBukkitPlugin {
     @Override
     protected void bindServices(ServiceCollection collection) {
         SQLInstallation sqlInstallation = collection.getInstallation(SQLInstallation.class);
-        SQLDataSource sqlDataSource = DragonNiteMC.getAPI().getSQLDataSource();
+        SQLDataSource sqlDataSource = DragoniteMC.getAPI().getSQLDataSource();
         sqlInstallation.injectDataSource(sqlDataSource.getDataSource(), MySQL8Dialect.class);
     }
 }
