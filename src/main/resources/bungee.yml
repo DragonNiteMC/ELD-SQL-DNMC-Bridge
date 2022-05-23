@@ -1,0 +1,6 @@
+name: Eld-SQL-DNMC-Bridge
+version: ${project.version}
+main: com.ericlam.mc.eldsqldnmcbridge.bungee.ELDSQLDNMCBridge
+depends:
+  - DragoniteMC-Bungee
+  - ELDependenci-SQL

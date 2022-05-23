@@ -1,28 +1,30 @@
-package com.ericlam.mc.eldsqldnmcbridge;
+package com.ericlam.mc.eldsqldnmcbridge.bukkit;
 
 import chu77.eldependenci.sql.SQLInstallation;
 import com.dragonnite.mc.dnmc.core.main.DragonNiteMC;
 import com.dragonnite.mc.dnmc.core.managers.SQLDataSource;
+import com.ericlam.mc.eld.BukkitManagerProvider;
+import com.ericlam.mc.eld.ELDBukkit;
 import com.ericlam.mc.eld.ELDBukkitPlugin;
-import com.ericlam.mc.eld.ManagerProvider;
 import com.ericlam.mc.eld.ServiceCollection;
-import com.ericlam.mc.eld.annotations.ELDPlugin;
 import org.hibernate.dialect.MySQL8Dialect;
 
-@ELDPlugin(
+@ELDBukkit(
         lifeCycle = BridgeLifeCycle.class,
         registry = BridgeRegistry.class
 )
 public class ELDSQLDNMCBridge extends ELDBukkitPlugin {
 
-    @Override
-    protected void manageProvider(ManagerProvider provider) {
-    }
 
     @Override
-    protected void bindServices(ServiceCollection collection) {
+    public void bindServices(ServiceCollection collection) {
         SQLInstallation sqlInstallation = collection.getInstallation(SQLInstallation.class);
         SQLDataSource sqlDataSource = DragonNiteMC.getAPI().getSQLDataSource();
         sqlInstallation.injectDataSource(sqlDataSource.getDataSource(), MySQL8Dialect.class);
+    }
+
+    @Override
+    protected void manageProvider(BukkitManagerProvider bukkitManagerProvider) {
+
     }
 }
